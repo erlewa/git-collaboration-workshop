@@ -4,19 +4,22 @@ def is_edge(i, j, dims):
   
   if i == dims[0]-1 or j == dims[1]-1:
     return True
-  print("i: ", i, "  j: ", j, "  dims: ", dims) 
+
   return False
 
+
 def print_box(width, height):
-  for i in height:
-    for j in width:
-      c = " "
-      if is_edge(i,j):
-        c = "*"
-  print(
-        "**********\n"
-        "*        *\n"
-        "**********"
-       )
+  out = ""
+  for y in range(height):
+    for x in range(width):
+      if is_edge(x, y, (width, height)):
+        out += "*"
+      else:
+        out += " "
+
+    out += "\n" 
+
+  print(out, end="")
 
 
+print_box(2, 2)
