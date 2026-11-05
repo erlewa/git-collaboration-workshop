@@ -1,4 +1,14 @@
 def is_edge(i, j, dims):
+  """Determine if cell (x, y) is on the edge of the box described by dims
+
+  Args:
+    x (int): The x coordinate of the cell 
+    y (int): The y coordinate of the cell
+    dims ((int, int)): The dimensions of the box
+
+  Returns:
+    bool: True if cell (x, y) is on the edge of the box, otherwise false
+  """
   if i == 0 or j == 0:
     return True
   
@@ -9,6 +19,12 @@ def is_edge(i, j, dims):
 
 
 def print_box(width, height):
+  """Print the outline of a box
+
+  Args:
+    width (int): The width of the box
+    height (int): The height of the box
+  """
   out = ""
   for y in range(height):
     for x in range(width):
@@ -21,5 +37,3 @@ def print_box(width, height):
 
   print(out, end="")
 
-
-print_box(2, 2)
