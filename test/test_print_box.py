@@ -76,7 +76,7 @@ def test_10_3(capsys):
 
     assert stdout.out == expected_10_3
 
-def test_10_3(capsys):
+def test_3_10(capsys):
     print_box(3, 10)
     stdout = capsys.readouterr()
 
