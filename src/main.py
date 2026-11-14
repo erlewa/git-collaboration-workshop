@@ -39,3 +39,7 @@ def main():
             print("Please enter an integer value")
 
         print_box(width, height)
+
+
+if __name__ == "__main__":
+    main()
