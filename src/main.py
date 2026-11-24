@@ -53,5 +53,6 @@ def main():
 
         except ValueError:
             print("Please enter an integer value")
+            return
 
         # Call print_box function with dimensions
